@@ -1,2 +1,2 @@
-0 23 * * * /home/mcadmin/mc-configs/goto-bed.sh
-0 12 * * * /home/mcadmin/mc-config/goto-bed.sh
+0 23 * * * /home/minecraft/mc-config/goto-bed.sh
+0 12 * * * /home/minecraft/mc-config/goto-bed.sh
