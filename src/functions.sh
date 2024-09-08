@@ -47,11 +47,23 @@ unban_players() {
   local unban_command="$3"
 
   while IFS= read -r player; do
-    if [[ $banned_players == *"$player"* ]]; then
+    if [ -z "$player" ]; then
+      continue
+    fi
+    if exists_in_list "$banned_players" " " $player; then
       $unban_command "$player"
       echo "$(date) $player ha sido desbaneado."
+    else
+      echo "$(date) $player no está baneado."
     fi
   done <<< "$allowed_players"
+}
+
+exists_in_list() {
+  local list=$1
+  local delimiter=$2
+  local value=$3
+  echo $list | tr "$delimiter" '\n' | grep -F -q -x "$value"
 }
 
 manage_server_access() {
