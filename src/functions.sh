@@ -19,11 +19,11 @@ get_players_connected() {
 }
 
 get_banned_players() {
-  cat ../banned-players.json | jq -r '.[].name'
+  cat $BANNED_PLAYERS_FILE | jq -r '.[].name'
 }
 
 get_allowed_players() {
-  cat ../allowed-players.txt
+  cat $ALLOWED_PLAYERS_FILE
 }
 
 ban_all_players() {

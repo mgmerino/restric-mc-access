@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ ! -f .env ]
+then
+  export $(cat `dirname $0`/../.env | xargs)
+fi
+
 source `dirname $0`/functions.sh
 
 main() {
