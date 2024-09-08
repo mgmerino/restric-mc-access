@@ -22,7 +22,7 @@ main() {
     exit 1
   fi
 
-  echo "Container name: $CONTAINER_NAME"
+  echo "Found a minecraft container, name: $CONTAINER_NAME"
 
   local ban_command="docker exec -i $CONTAINER_NAME rcon-cli ban"
   local unban_command="docker exec -i $CONTAINER_NAME rcon-cli pardon"
