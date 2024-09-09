@@ -1,0 +1,7 @@
+steps:
+  - name: test
+    image: bats/bats:latest
+    commands:
+      - bats test/test.bats
+    when:
+      event: push
