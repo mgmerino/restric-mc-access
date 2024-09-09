@@ -23,7 +23,7 @@ And of course, I learned how to test bash scripts using BATS.
 
 - [ ] Add more tests
 - [ ] Add more documentation
-- [ ] Add a CI/CD pipeline
+- [x] Add a CI/CD pipeline
 
 ## Usage
 
