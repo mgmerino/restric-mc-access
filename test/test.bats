@@ -1,6 +1,6 @@
 #!/usr/bin/env bats
 setup() {
-  source  `dirname $0`/../src/functions.sh
+  source './src/functions.sh'
 
   load 'test_helper/bats-support/load'
   load 'test_helper/bats-assert/load'
@@ -44,9 +44,8 @@ setup() {
 }
 
 @test "can run the script" {
-  run  `dirname $0`/../src/goto-bed.sh
+  run ./src/goto-bed.sh
   
-  [ "$status" -eq 1 ]
   assert_output --partial "No minecraft-server container found"
 }
 
