@@ -1,3 +1,5 @@
+[![status-badge](http://pajaro-carpintero.hal9.xyz/api/badges/1/status.svg)](http://pajaro-carpintero.hal9.xyz/repos/1)
+
 # Restrict access to Minecraft Server during certain hours.
 
 This bash script is used to ban ALL users connected to a Minecraft server at a given time. It could be useful for parents who want to restrict their children's access to the server during school hours or at night.
