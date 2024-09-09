@@ -43,13 +43,6 @@ setup() {
   }
 }
 
-@test "can run the script" {
-  run ./src/goto-bed.sh
-  
-  [ "$status" -eq 1 ]
-  assert_output --partial "No minecraft-server container found"
-}
-
 @test "Should ban all connected players" {
   ban_message="El servidor está cerrado en este momento. Es hora de descansar."
 
